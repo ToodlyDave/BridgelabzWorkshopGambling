@@ -54,4 +54,12 @@ public class Gamble {
 		}
 	}
 	
+	public void shouldTheyGamble() {
+		
+		do{
+			System.out.println("\n ==> Decided to play for one more month");
+			gambleForMonth();
+		}while (winnings > 0);
+	}
+	
 }
