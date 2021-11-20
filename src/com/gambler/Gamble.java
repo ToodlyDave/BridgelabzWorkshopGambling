@@ -44,11 +44,11 @@ public class Gamble {
 		// Update total winning amount for this day
 		if(amount == 150) {
 			winnings += 50;
-			System.out.println("\n Gambler won 50$ today");
+			System.out.println(" Gambler won 50$ today");
 		}
 		else {
 			winnings -= 50;
-			System.out.println("\n Gambler lost 50$ today");
+			System.out.println(" Gambler lost 50$ today");
 		}
 	}
 	
@@ -56,6 +56,7 @@ public class Gamble {
 		
 		//We gamble for 30 days
 		for (int days = 0; days < 30; days++) {
+			System.out.println("\n DAY " + days);
 			gamble();			
 			// We set the new luckiest day
 			if(wins > winMax) {
@@ -74,9 +75,9 @@ public class Gamble {
 			
 			// Display total winnings so far
 			if (winnings >= 0) 
-				System.out.println(" DAY " + days + "The gambler has won " + winnings + " so far");
+				System.out.println(" The gambler has won " + winnings + " so far");
 			else
-				System.out.println(" DAY " + days + " The gambler has lost " + (-winnings) + " so far");
+				System.out.println(" The gambler has lost " + (-winnings) + " so far");
 			amount = 100d;
 		}
 		
@@ -87,9 +88,11 @@ public class Gamble {
 	
 	public void shouldTheyGamble() {
 		
+		int count = 1;
 		do{
-			System.out.println("\n ==> Decided to play for one more month");
+			System.out.println("\n MONTH: " + count + " ==> Decided to play for one more month");
 			gambleForMonth();
+			count++;
 		}while (winnings > 0);
 	}
 	
