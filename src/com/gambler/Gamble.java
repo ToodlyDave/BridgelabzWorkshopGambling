@@ -40,9 +40,9 @@ public class Gamble {
 		}
 	}
 	
-	public void gambleFor20() {
+	public void gambleForMonth() {
 		
-		for (int days = 0; days < 20; days++) {
+		for (int days = 0; days < 30; days++) {
 			gamble();
 			if (winnings >= 0) 
 				System.out.println(" The gambler has won " + winnings + " so far");
