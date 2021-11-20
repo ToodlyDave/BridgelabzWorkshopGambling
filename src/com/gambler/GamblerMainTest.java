@@ -1,17 +1,24 @@
 package com.gambler;
 
 public class GamblerMainTest {
+	
+	static double amount = 100d;
+	static final double BETTING_AMOUNT = 1;
+	
+	public static void gamble() {
+		int win = (int)(Math.random() * 2);
+		
+		if (win == 1) {
+			amount += BETTING_AMOUNT;
+		}
+		else
+			amount -= BETTING_AMOUNT;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		double amount = 100d;
-		final double BETTING_AMOUNT = 1;
-
-		System.out.println(" Welcome to the Gambler simulator");
-		
-		System.out.println(" Gambler starts off with " + amount + " every day");
-		System.out.println(" They place a bet of " + BETTING_AMOUNT);
+		gamble();
 	}
 
 }
