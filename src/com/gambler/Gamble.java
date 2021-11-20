@@ -34,9 +34,11 @@ public class Gamble {
 		
 		if(amount == 150) {
 			winnings += 50;
+			System.out.println("\n Gambler won 50$ today");
 		}
 		else {
 			winnings -= 50;
+			System.out.println("\n Gambler lost 50$ today");
 		}
 	}
 	
